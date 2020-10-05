@@ -14,5 +14,12 @@ hoy += "mas bonito";
 let miNombre = "Maider";
 let firstQuote = "Mi nombre es";
 let lastQuote = "como estas?";
+let blank = " "
 
-firstQuote.concat(miNombre, lastQuote);
+firstQuote
+    .concat(blank)
+    .concat(miNombre)
+    .concat(blank)
+    .concat(lastQuote);
+
+
