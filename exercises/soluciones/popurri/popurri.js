@@ -100,8 +100,14 @@ function esElNumero () {
 esElNumero();
      
 //6
+let year = new Date().getFullYear()
+for (let i = year; i <= year + 20; i++) {
+    if (i % 4 === 0 || i % 100 === 0) {
+        console.log(`El año ${i} es bisiesto`);
+    };
+}
 
 
-
+//7
 
 
