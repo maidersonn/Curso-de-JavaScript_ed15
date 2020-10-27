@@ -62,40 +62,44 @@ function pideYEligeMUltiplicarOSumar () {
 }
 
 //5 
-    let numeroSecreto = Math.floor(Math.random() * 100) + 1;
-    
-    function preguntaNumeroAlUsuario () {
-        const respuesta = parseInt(prompt ("averigua un numero del 1 al 100"));
-        return respuesta;
-    }
-    let respuestaUsuario = preguntaNumeroAlUsuario();
-     
-    let arrayRespuestas = [];
-    arrayRespuestas.push(respuestaUsuario);
-    let intentos = 0;
+let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+let arrayRespuestas = [];
+let intentos = 0;
 
-    function comprobarIntento (numero) {
-        if (arrayRespuestas.includes(numero)){
-            intentos = intentos;
-        } else {
-            intentos ++;
-        }  
-    }
+function preguntaNumeroAlUsuario () {
+    const respuesta = parseInt(prompt ("averigua un numero del 1 al 100"));
+    return respuesta;
+}
+
+function comprobarIntento (numero) {
+    if (!arrayRespuestas.includes(numero)){
+        arrayRespuestas.push(numero);
+        intentos ++;
+    }  
+}
+function esElNumero () {
+
+    let respuestaUsuario = preguntaNumeroAlUsuario();
 
     if (respuestaUsuario > numeroSecreto) {
         alert("Tu respuesta el mayor que el numero a averiguar.");
-        comprobar(respuestaUsuario);
-        respuestaUsuario = preguntaNumeroAlUsuario();
-         
+        comprobarIntento(respuestaUsuario);
+        esElNumero();
+        
     } else if (respuestaUsuario < numeroSecreto) {
         alert("Tu respuesta el menos que el numero a averiguar.");
-        comprobar(respuestaUsuario);
-        respuestaUsuario = preguntaNumeroAlUsuario();
+        comprobarIntento(respuestaUsuario);
+        esElNumero();
 
     } else {
         alert (`has acertado ! te ha costado ${intentos} intentos`);
     }
 
+}
+
+esElNumero();
+     
+//6
 
 
 
