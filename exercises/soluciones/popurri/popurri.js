@@ -124,4 +124,19 @@ console.log(elMasLargo(arrayDeStrings));
 
 //8
 
+function arrayPares (array) {
+    let respuesta = [];
+    for (let i = 0; i < array.length; i++) {
+        if (i % 2 === 0) {
+            respuesta.push(array[i]);
+        }
+    }
+    return respuesta;
+}
+
+const nuevoArray = arrayDeStrings.filter((_, index) => index % 2 === 0);  
+
+//9
+
+
 
