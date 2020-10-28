@@ -110,4 +110,18 @@ for (let i = year; i <= year + 20; i++) {
 
 //7
 
+function elMasLargo (array) {
+    let resultado = "";
+    for ( i = 0 ; i < array.length ; i ++) {
+        if (array[i].length > resultado.length) {
+            resultado = array[i];
+        }
+    }
+    return resultado;
+}
+let arrayDeStrings = ["esto", "es", "un", "array", "de", "strings"];
+console.log(elMasLargo(arrayDeStrings));
+
+//8
+
 
