@@ -137,6 +137,36 @@ function arrayPares (array) {
 const nuevoArray = arrayDeStrings.filter((_, index) => index % 2 === 0);  
 
 //9
+/**
+ * 
+ * ada
+ * adafada
+ * ociico
+ * erre
+ * e
+ * 
+ */
+function esPalindromo (palabra) {
+
+}
+
+
+//10
+
+function concatenar (array1, array2) {
+      let array3 = array1.concat(array2);
+      return array3;
+}
+console.log(concatenar(bat,bi))
+
+function concatenarConLoop (array1, array2) {
+    
+    for (let i = 0; i < array2.length; i++) {
+        array1.push(array2[i])
+    }
+    return array1;
+}
+console.log(concatenarConLoop(bat,bi));
 
 
 
