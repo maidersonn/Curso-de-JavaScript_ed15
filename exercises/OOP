@@ -1,0 +1,52 @@
+class TV {
+  static defaultValues = {
+    channel: 1,
+    volume: 50,
+  };
+
+  static toString() {
+    console.log("Soy una tele");
+  }
+
+  constructor(brand) {
+    this._maxChannel = 50;
+    this._maxVolume = 100;
+    this._minVolume = 0;
+    this.brand = brand;
+    this.channel = TV.defaultValues.channel;
+    this.volume = TV.defaultValues.volume;
+  }
+
+  changeChannel(channel) {
+    if (channel > this._maxChannel) {
+      this.channel = this.channel;
+    } else {
+      this.channel = channel;
+    }
+  }
+
+  increaseVolume(volume) {
+    if (this.volume + volume > this._maxVolume) {
+      this.volume = this._maxVolume;
+    } else {
+      this.volume += volume;
+    }
+  }
+
+  decreaseVolume(volume) {
+    if (this.volume - volume < this._minVolume) {
+      this.volume = this._minVolume;
+    } else {
+      this.volume -= volume;
+    }
+  }
+
+  reset() {
+    this.volume = TV.defaultValues.volume;
+    this.channel = TV.defaultValues.channel;
+  }
+
+  get status() {
+    return `La tv ${this.brand} está en el canal ${this.channel} en el volumen ${this.volume}`;
+  }
+}

@@ -168,5 +168,14 @@ function concatenarConLoop (array1, array2) {
 }
 console.log(concatenarConLoop(bat,bi));
 
+//11
+
+function convierteEnArray (numero) {
+    let stringDelNumero = numero.toString();
+    let respuesta = [];
+   
+    }
+
+}
 
 
